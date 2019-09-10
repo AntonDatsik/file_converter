@@ -1,3 +1,3 @@
 # file_converter
 
-Django application for convert html links and files to PDF format.
+Django application for converting html links and files to PDF format.
