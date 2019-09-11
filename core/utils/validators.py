@@ -17,7 +17,7 @@ class FileFieldValidator:
         extension = match.group('extension').lower()
         if extension != self.extension:
             raise ValidationError(
-                _("File have wrong extension. %(exp_extension)s is expected, got %(extension)s.") % {
+                _("File has wrong extension. %(exp_extension)s is expected, got %(extension)s.") % {
                     'exp_extension': self.extension,
                     'extension': extension
                 }
