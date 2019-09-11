@@ -24,6 +24,6 @@ schema_view = get_swagger_view(title='File Converter API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('^api/v1/', include('core.urls')),
+    re_path('^api/v1/', include('converter.urls')),
     re_path('^', schema_view),
 ]

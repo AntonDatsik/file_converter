@@ -13,5 +13,5 @@ INSTALLED_APPS = [
 
     'rest_framework_swagger',
 
-    'core'
+    'converter'
 ]

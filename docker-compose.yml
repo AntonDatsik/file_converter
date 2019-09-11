@@ -12,3 +12,16 @@ services:
       - 8000:8000
     environment:
       - DEBUG=1
+      - SQL_DATABASE=converter
+      - SQL_USER=converter
+      - SQL_PASSWORD=converter
+      - SQL_HOST=db
+      - SQL_PORT=5432
+    depends_on:
+      - db
+  db:
+    image: postgres:11.2-alpine
+    environment:
+      - POSTGRES_USER=converter
+      - POSTGRES_PASSWORD=converter
+      - POSTGRES_DB=converter

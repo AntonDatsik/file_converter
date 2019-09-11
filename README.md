@@ -15,7 +15,7 @@ Uses Swagger as tool for documentation.
 Docker can be used only for development purposes.
 
 Build an image from a Dockerfile:
-`docker build . -t file_converter:latest`
+`docker build . -t file_converter:latest` or `docker-compose build`
 
 Start containers:
 `docker-compose up`

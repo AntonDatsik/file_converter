@@ -13,7 +13,7 @@ class FileFieldValidator:
         file_name = value.name
         match = self.EXTENSION_REGEX.match(file_name)
         if not match:
-            raise ValidationError(_("File don't have extension."))
+            raise ValidationError(_("File doesn't have extension."))
         extension = match.group('extension').lower()
         if extension != self.extension:
             raise ValidationError(
