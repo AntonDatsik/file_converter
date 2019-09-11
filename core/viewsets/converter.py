@@ -2,22 +2,18 @@ import logging
 
 from django.http import HttpResponse
 from django.utils.translation import gettext_lazy as _
-
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
-from rest_framework.generics import GenericAPIView
 
 from core.converters import html_link_to_pdf, html_str_to_pdf
 from core.serializers.converter import ConverterViewParamsSerializer
-from rest_framework.parsers import FormParser, MultiPartParser, JSONParser
-
 
 logger = logging.getLogger(__name__)
 
 
 class ConvertDocumentView(GenericAPIView):
     serializer_class = ConverterViewParamsSerializer
-    parser_classes = (MultiPartParser, FormParser, JSONParser)
 
     def post(self, request):
         serializer = self.get_serializer(data=request.data)

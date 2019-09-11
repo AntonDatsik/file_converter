@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web:
-    image: pdf_generator:latest
+    image: file_converter:latest
     build:
       context: .
     command:  python manage.py runserver 0.0.0.0:8000
